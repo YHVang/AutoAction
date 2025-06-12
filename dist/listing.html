@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <title>Dodge Challenger - Auto Auction</title>
+    <script defer src="/js/bid.js"></script>
+</head>
+
+<body>
+
+    <form class="topnav" action="gallery" method="get">
+        <a href="/">About</a>
+        <a href="/gallery">Gallery</a>
+        <a href="/create">Add Listing</a>
+        <input name="query" type="search" placeholder="Search.." />
+        <select name="category" id="cars">
+            <option value="">None</option>
+            <option value="coupe">Coupe</option>
+            <option value="truck">Truck</option>
+            <option value="suv">SUV</option>
+        </select>
+        <input type="submit" value="Submit" />
+    </form>
+
+    <h1 class="listingh">Dodge Challenger</h1>
+
+    <div class="row">
+        <div class="column">
+            <img src="https://images.unsplash.com/photo-1632686341369-8a7991237930" alt="Image of Dodge Challenger" />
+            <p>This blue Dodge Challenger offers an unbeatable combination of striking looks and heart-pounding
+                performance. With its powerful engine and sleek design, it delivers an exhilarating driving experience
+                that’s sure to turn heads. Don't miss the chance to own this iconic muscle car and make a statement on
+                the road today!</p>
+        </div>
+
+        <div class="column">
+            <div class="bidColumn">
+                <div class="bids">
+                    <p class="bidword">Bids</p>
+                    <input id="btnButton" class="bidButton" type="button" value="Place Bid" />
+                </div>
+
+                <div>
+                    <form id="bidInput" data-id="1">
+                        <label for="nameinput">Your name:</label><br />
+                        <input id="nameinput" type="text" name="nameinput" placeholder="Name here" /><br />
+
+                        <label for="amount">Amount</label><br />
+                        <div id="error-message" style="display:none; color: red;">
+                            <p>The bid must be higher than the current highest bid of $5500</p>
+                        </div>
+                        <input id="amount" type="number" name="amount" placeholder="Amount here" min="15000" /><br />
+
+                        <input id="submit" type="submit" value="Submit" /><br />
+
+                        <label for="comments">Comments</label><br />
+                        <textarea id="comments" name="comments" rows="4" cols="30"
+                            placeholder="Comments here"></textarea>
+                    </form>
+                </div>
+
+                <div id="bidContainer">
+                    <div class="bidDiv">
+                        <p class="top">Carl k</p>
+                        <p class="top">$4500</p>
+                        <p class="bot">I would love this car.</p>
+                    </div>
+
+                    <div class="bidDiv">
+                        <p class="top">Sam Samson</p>
+                        <p class="top">$5500</p>
+                        <p class="bot">I just want to use money.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

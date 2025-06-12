@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <title>Auto Auction</title>
+    <script defer src="/js/table.js"></script>
+</head>
+
+<body>
+
+    <form class="topnav" action="gallery" method="get">
+        <a href="/">About</a>
+        <a href="/gallery">Gallery</a>
+        <a href="/create">Add Listing</a>
+        <div>
+            <input name="query" type="search" placeholder="Search.." />
+            <select id="cars" name="category">
+                <option value="">None</option>
+                <option value="coupe">Coupe</option>
+                <option value="truck">Truck</option>
+                <option value="suv">SUV</option>
+            </select>
+            <input type="submit" value="Submit" />
+        </div>
+    </form>
+
+    <h1 class="listingh">Auto Auction list</h1>
+
+    <div class="listingColumn">
+        <div class="tableContainer">
+            <table border="1">
+                <tr>
+                    <th>Listing</th>
+                    <th>Number of Bids</th>
+                    <th>Top Bid</th>
+                    <th>Auction Ends</th>
+                </tr>
+
+                <!-- Static Example 1 -->
+                <tr id="tableRow" class="box">
+                    <td id="imgData1" data-image="https://images.unsplash.com/photo-1632686341369-8a7991237930">
+                        <a href="/listing/1">Dodge Challenger</a>
+                    </td>
+                    <td>2</td>
+                    <td>$ 5500</td>
+                    <td id="timerid1">08/20/2024</td>
+                    <td><input id="delete" class="bidButton" data-id="1" type="button" value="delete"></td>
+                </tr>
+
+                <!-- Static Example 2 -->
+                <tr id="tableRow" class="box">
+                    <td id="imgData2" data-image="https://images.unsplash.com/photo-1610378985708-ac6de045f9f3">
+                        <a href="/listing/2">Ford Mustang</a>
+                    </td>
+                    <td>2</td>
+                    <td>$ 6500</td>
+                    <td id="timerid2">09/15/2024</td>
+                    <td><input id="delete" class="bidButton" data-id="2" type="button" value="delete"></td>
+                </tr>
+
+                <!-- Static Example 3 -->
+                <tr id="tableRow" class="box">
+                    <td id="imgData3" data-image="https://images.unsplash.com/photo-1621993202323-f438eec934ff">
+                        <a href="/listing/3">Toyota Tundra</a>
+                    </td>
+                    <td>3</td>
+                    <td>$ 9500</td>
+                    <td id="timerid3">09/10/2024</td>
+                    <td><input id="delete" class="bidButton" data-id="3" type="button" value="delete"></td>
+                </tr>
+
+                <!-- Static Example 4 -->
+                <tr id="tableRow" class="box">
+                    <td id="imgData4" data-image="https://images.unsplash.com/photo-1609772168547-d216c44c3f85">
+                        <a href="/listing/4">Subaru Outback</a>
+                    </td>
+                    <td>3</td>
+                    <td>$ 9500</td>
+                    <td id="timerid4">09/12/2024</td>
+                    <td><input id="delete" class="bidButton" data-id="4" type="button" value="delete"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="imgPreview" class="sideOfTable"></div>
+    </div>
+
+</body>
+
+</html>
