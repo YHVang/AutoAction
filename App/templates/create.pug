@@ -1,0 +1,39 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='/css/main.css')
+  script(defer='').
+  script(defer='' src='/js/table.js')
+  title Create
+form.topnav(action='gallery' method='get')
+  a(href='/') About
+  a(href='/gallery') Gallery
+  a(href='/create') Add Listing
+  div
+    input(name='query' type='search' placeholder='Search..')
+    select#cars(name='category')
+      option(value='') None
+      option(value='coupe') Coupe
+      option(value='truck') Truck
+      option(value='suv') SUV
+    input(type='submit' value='Submit')
+.createBody
+  h1#mainH1 Add a Listing
+  .createDiv
+    form(action='create' method='post')
+      label.createLabel Title
+      input#listingTitle(name='listingTitle' placeholder='Listing title')
+      label.createLabel Image URL:
+      input#imgInput(name='imgInput' placeholder='https://example.com/image.jpg')
+      label.createLabel Description
+      textarea#textA(name='textA' rows='4' cols='30')
+      label.createLabel All Categories
+      select#carsCat(name='carsCat')
+        option(value='Small') Small
+        option(value='SUV') SUV
+        option(value='Truck') Truck
+        option(value='Other') Other
+      label.createLabel Sale Date:
+      input#date(name='date' type='date')
+      input(type='submit' value='Submit')

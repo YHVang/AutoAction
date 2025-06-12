@@ -1,0 +1,47 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='/css/main.css')
+  title Auto Auction
+  script(defer='' src='/js/table.js')
+form.topnav(action='gallery' method='get')
+  a(href='/') About
+  a(href='/gallery') Gallery
+  a(href='/create') Add Listing
+  div
+    input(name='query' type='search' placeholder='Search..')
+    select#cars(name='category')
+      option(value='') None
+      option(value='coupe') Coupe
+      option(value='truck') Truck
+      option(value='suv') SUV
+    input(type='submit' value='Submit')
+h1.listingh Auto Auction list
+.listingColumn
+  .tableContainer
+    table(border='1')
+        tr
+            th Listing
+            th Number of Bids
+            th Top Bid
+            th Auction Ends
+        each listing in tempListing
+            - let urlListingID = "/listing/"+listing.numericID
+            - let timerId = "timerid"+listing.numericID
+            - let numOfBids = listing.bids.length
+            - let imgData = "imgData"+listing.numericID
+            - let maxBids = 0
+            each bid in listing.bids 
+                - maxBids = Math.max(bid.bidAmount)
+
+            tr#tableRow.box
+                td(id=imgData)(data-image=listing.url)
+                    a(href= urlListingID) #{listing.vehicle}
+                td #{numOfBids}
+                td $ #{maxBids}
+                td(id = timerId) #{listing.date}
+                td 
+                  input#delete.bidButton(data-id=listing.numericID type ='button' value='delete')  
+  #imgPreview.sideOfTable
+

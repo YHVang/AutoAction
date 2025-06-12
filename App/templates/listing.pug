@@ -1,0 +1,52 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel='stylesheet' href='/css/main.css')
+    title #{listing.vehicle} - Auto Auction
+    script(defer='' src='/js/bid.js')
+  body
+    form.topnav(action="gallery" method="get")
+      a(href="/") About
+      a(href="/gallery") Gallery
+      a(href='/create') Add Listing
+      input(name="query" type="search" placeholder="Search..")
+      select(name="category" id="cars")
+        option(value='') None
+        option(value="coupe") Coupe
+        option(value="truck") Truck
+        option(value="suv") SUV
+      input(type="submit" value="Submit")
+    h1.listingh #{listing.vehicle}
+    div
+      .row
+        .column
+          img(src=listing.url alt=`Image of ${listing.vehicle}`)
+          p #{listing.description}
+        .column
+          .bidColumn
+            .bids
+              p.bidword Bids
+              input#btnButton.bidButton(type="button" value="Place Bid")
+            div
+              form#bidInput(data-id=listing.numericID)
+                label(for="nameinput") Your name:
+                br
+                input#nameinput(type="text" name="nameinput" placeholder="Name here")
+                br
+                label(for="amount") Amount
+                br
+                div(id="error-message" style="display:none; color: red;")
+                  p The bid must be higher than the current highest bid of $#{listing.highestBidAmount}
+                input#amount(type="number" name="amount" placeholder="Amount here" min="15000")
+                br
+                input#submit(type="submit" value="Submit")
+                label(for="comments") Comments
+                textarea#comments(name="comments" rows="4" cols="30" placeholder="Comments here")
+            #bidContainer
+              each bid in listing.bids
+                .bidDiv
+                  p.top= bid.bidder
+                  p.top= `$${bid.bidAmount}`
+                  p.bot= bid.comment

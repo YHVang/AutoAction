@@ -1,0 +1,44 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='/css/main.css')
+  title Auto Auctions
+form.topnav(action='gallery' method='get')
+  a(href='/') About
+  a(href='/gallery') Gallery
+  a(href='/create') Add Listing
+  div
+    input(name='query' type='search' placeholder='Search..')
+    select#cars(name='category')
+      option(value='') None
+      option(value='coupe') Coupe
+      option(value='truck') Truck
+      option(value='suv') SUV
+    input(type='submit' value='Submit')
+h1#mainH1 Auto Auctions
+h2#mainH2 &quot;Bid, Win, Drive!&quot;
+.main.content
+  .row
+    .column.img
+      img(src='https://images.unsplash.com/photo-1652660771416-032b5debd5be?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA==' alt='Auto Acution Image')
+    // More information on the IMG and HW details. Needs some URL
+    .column.des
+      p
+        | Car auctions are events where people buy and sell cars by bidding against each other. Cars are sold to the
+        strong Highest
+        |  bidder. Come take a look and bid on one of our vehicles. Don&apos;t let this chance slip
+        |           by!
+      p
+        | Looking for unique or special cars? Our auto auction has a whole variety to choose from. From small 2 doors
+        | to limousines. All kinds of makes and models goes through our auction. You can find your future vehicle here!
+        em Our times are from sunrise to sunset.
+// bulletpoint list. Whatever is fine. Recommend description of the aution and list of appealing aspeacs such as key features of compay or exiting things "i've sold". be creative
+ul
+  li Easy bidding
+  li Quick registration
+  li Bulletpoint
+p
+  | Feel free to just come and look without bidding. Enjoy the enviorment of our vehicles 
+  a(href='/gallery') Gallery
+  |  and staff.

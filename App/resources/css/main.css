@@ -1,0 +1,150 @@
+body{
+    background-color: lightblue;
+    margin: 0px;
+    padding: 0px;
+    font-family: garamond;
+}
+body form a {
+    padding-right: 25px;
+}
+.topnav{
+    background-color: burlywood;
+    padding: 15px 18px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.topnav a:hover{
+    background-color: blueviolet;
+}
+
+.topnav div{
+    float: right;
+    font-family: 'Courier New', Courier, monospace;
+}
+option{
+    font-family: inherit;
+}
+input{
+    font-family: inherit;
+}
+img{
+    max-width: 100%;
+    max-height: 100vh;
+}
+
+@import url('https://fonts.googleapis.com/css?family=ExtraLight');
+
+#mainH1{
+    font-family: 'ExtraLight',sans-serif;
+    text-align: center;
+    
+}
+#mainH2{
+    text-align: center;
+}
+strong{
+    color: rgba(165, 13, 163, 0.748);
+}
+em{
+    color: red;
+}
+.row{
+    display: flex;
+}
+.column{
+    flex: 40%;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.column.des{
+    background-color: rgb(152, 122, 83);
+    font-family: 'Courier New', Courier, monospace;
+}
+.main.content{
+    text-align: center;
+}
+.bids{
+    font-size: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+.bidword{
+    padding-right: 45%;
+}
+.bidButton{
+    padding: 5px 15px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    background-color: gray;
+    color: white;
+}
+.bidColumn{
+    background-color: burlywood;
+    border-radius: 25px;
+    padding: 10px;
+
+}
+.bidDiv{
+    background-color: gray;
+    padding: 5%;
+    margin: 5px;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.top{
+    width: 50%;
+}
+
+table{
+    text-align: center;
+}
+table th{
+    background: burlywood;
+}
+table tr:nth-child(odd) {
+    background-color: burlywood;
+}
+.createBody{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.createDiv{
+    width: 125px;
+    display: flex;
+    flex-direction: column;
+}
+
+.createDiv label{
+    /* width: 200px; */
+    display: inline-block;
+}
+
+.createDiv label{
+    padding-top: 20px;
+}
+
+.box:hover{
+    color: #fff;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 10px 5px rgba(0,0,0,0.5);
+}
+
+.tableContainer{
+    float: left;
+    padding: 10%;
+}
+
+
+
+.listingh{
+    font-family: 'ExtraLight',sans-serif;
+    text-align: center;
+}

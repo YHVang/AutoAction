@@ -1,0 +1,21 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='/css/main.css')
+  title Auto Auction
+  script(defer='' src='/resources/js/table.js')
+form.topnav(action='gallery' method='get')
+  a(href='/') About
+  a(href='/gallery') Gallery
+  a(href='/create') Add Listing
+  div
+    input(name='query' type='search' placeholder='Search..')
+    select#cars(name='category')
+      option(value='') None
+      option(value='small') Coupe
+      option(value='truck') Truck
+      option(value='suv') SUV
+    input(type='submit' value='Submit')
+h1.listingh Auto Auction list
+h1 File not found
